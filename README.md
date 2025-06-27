@@ -16,10 +16,10 @@ Note: Image sharing is currently not supported.
 
 
 #Tech Stack    
-Frontend:  React, Tailwind CSS
-Backend: Node.js, Express.js
-Real-Time: Socket.io
-Database: MongoDB (via Mongoose)
-Authentication: JWT (JSON Web Tokens)
+1. Frontend:  React, Tailwind CSS
+2. Backend: Node.js, Express.js
+3. Real-Time: Socket.io
+4. Database: MongoDB (via Mongoose)
+5. Authentication: JWT (JSON Web Tokens)
 
 
