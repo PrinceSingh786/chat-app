@@ -17,8 +17,8 @@ const Sidebar = () => {
   const navigate = useNavigate();
   const filteredUsers = input
     ? users.filter((user) =>
-        user.fullName.toLowerCase().includes(input.toLowerCase())
-      )
+      user.fullName.toLowerCase().includes(input.toLowerCase())
+    )
     : users;
 
   useEffect(() => {
@@ -27,9 +27,7 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`bg-[#818582]/10 h-full p-5 rounded-r-xl overflow-y-scroll
-
-text-white ${selectedUser ? "max-md:hidden" : ""}`}
+      className={`bg-white/10 backdrop-blur-lg shadow-xl h-full p-5 rounded-r-xl overflow-y-scroll text-white ${selectedUser ? "max-md:hidden" : ""}`}
     >
       <div className="pb-5">
         <div className="flex justify-between items-center">
@@ -41,9 +39,7 @@ text-white ${selectedUser ? "max-md:hidden" : ""}`}
               className="max-w-5 cursor-pointer"
             />
             <div
-              className="absolute top-full right-0 z-20 w-32 p-5 rounded-md
-   bg-[#282142] border border-gray-600 text-gray-100 hidden
-group-hover:block"
+              className="absolute top-full right-0 z-20 w-32 p-5 rounded-md bg-[#282142] border border-gray-600 text-gray-100 hidden group-hover:block"
             >
               <p
                 onClick={() => navigate("/profile")}
@@ -77,16 +73,17 @@ group-hover:block"
               setselectedUser(user);
               setUnseenMessages((prev) => ({ ...prev, [user._id]: 0 }));
             }}
-            className={`relative flex items-center gap-2 p-2 pl-4 rounded cursor-pointer max-sm:text-sm ${
-              selectedUser?._id === user._id && "bg-[#282142]/50"
-            }`}
+            className={`relative flex items-center gap-2 p-2 pl-4 rounded cursor-pointer max-sm:text-sm transition-all duration-200 hover:bg-white/20 ${selectedUser?._id === user._id && "bg-[#282142]/50 shadow-lg"
+              }`}
           >
-            <img
-              src={user?.profilePic || assets.avatar_icon}
-              alt=""
-              className="w-[35px] aspect-[1/1] rounded-full"
-            />
-
+            <div className="relative">
+              <img
+                src={user?.profilePic || assets.avatar_icon}
+                alt=""
+                className="w-[35px] aspect-[1/1] rounded-full border-2 border-white/20 shadow"
+              />
+              <span className={`absolute bottom-0 right-0 w-3 h-3 rounded-full border-2 border-white ${onlineUsers.includes(user._id) ? "bg-green-400" : "bg-gray-400"}`}></span>
+            </div>
             <div className="flex flex-col leading-5">
               <p>{user.fullName}</p>
               {onlineUsers.includes(user._id) ? (
