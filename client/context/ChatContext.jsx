@@ -81,7 +81,7 @@ export const ChatProvider = ({ children }) => {
   useEffect(() => {
     subscribeToMessages();
     return () => unsubscribeFromMessages();
-  }, []);
+  }, [selectedUser, socket]);
 
   const value = {
     messages,
