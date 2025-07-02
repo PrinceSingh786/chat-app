@@ -15,9 +15,7 @@ const RightSidebar = () => {
   return (
     selectedUser && (
       <div
-        className={`bg-[#8185B2]/10 text-white w-full relative overflow-y-scrol ${
-          selectedUser ? "max-md:hidden" : ""
-        }`}
+        className={"bg-[#23244a] h-full p-6 rounded-l-2xl shadow-xl text-white border-l-2 border-[#4f46e5] max-md:hidden w-full relative overflow-y-scroll"}
       >
         <div className="pt-16 flex flex-col items-center gap-2 mx-auto text-xs font-light">
           <img

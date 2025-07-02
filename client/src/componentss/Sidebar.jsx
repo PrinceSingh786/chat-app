@@ -27,7 +27,7 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`bg-white/10 backdrop-blur-lg shadow-xl h-full p-5 rounded-r-xl overflow-y-scroll text-white ${selectedUser ? "max-md:hidden" : ""}`}
+      className={"bg-[#1a1c2c] h-full p-6 rounded-r-2xl shadow-xl text-white border-r-2 border-[#4f46e5] max-md:hidden overflow-y-scroll"}
     >
       <div className="pb-5">
         <div className="flex justify-between items-center">

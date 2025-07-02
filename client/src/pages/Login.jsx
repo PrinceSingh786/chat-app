@@ -27,13 +27,13 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#1e215d] via-[#282142] to-[#4b2067] bg-cover bg-center flex items-center justify-center gap-8 sm:justify-evenly max-sm:flex-col backdrop-blur-2xl">
+    <div className="min-h-screen bg-[#1a1c2c] bg-cover bg-center flex items-center justify-center gap-8 sm:justify-evenly max-sm:flex-col">
       {/*----------left-------------*/}
       <img src={assets.logo_big} alt="" className="w-[min(30vw,250px)]" />
       {/*----------right------*/}
       <form
         onSubmit={onSubmitHandler}
-        className="border-2 bg-white/20 backdrop-blur-lg text-white border-gray-500 p-8 flex flex-col gap-6 rounded-2xl shadow-2xl min-w-[320px] max-w-[400px]"
+        className="border-2 bg-[#23244a] text-white border-[#4f46e5] p-8 flex flex-col gap-6 rounded-2xl shadow-2xl min-w-[320px] max-w-[400px]"
       >
         <h2 className="font-medium text-2xl flex justify-between items-center">
           {currState}
